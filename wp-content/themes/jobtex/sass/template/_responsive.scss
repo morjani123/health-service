@@ -1,0 +1,216 @@
+/*
+*  Responsive
+*/
+@media(min-width: 1440px){
+    .container{
+        max-width: 1440px;
+    }
+    .row-margin-left{
+        > .elementor-container{
+            overflow: hidden;
+            width: calc( 1440px + ((100% - 1440px) / 2) );
+            max-width: calc( 1440px + ((100% - 1440px) / 2) ) !important;
+            left: calc( (100% - 1440px) / 4 );
+            padding-right: calc( (100% - 1440px) / 2);
+        }
+    }
+    .fullscreen .slick-list{
+      overflow: visible;
+    }
+    .plr-xxl-45{
+        padding-right: 45px;
+        padding-left: 45px;
+    }
+}
+@media (min-width: 1200px){
+    .hidden-dots,
+    .hidden-dot-lg{
+        .slick-dots{
+            display: none;
+        }
+    }
+}
+@media(max-width: 1199px){
+    .category-banner-inner .title{
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+    .box-dashboard-wrapper{
+        .space-30{
+            margin-bottom: 20px !important;
+        }
+    }
+}
+@media (max-width: 991px){
+    // logo 991px  
+    //----------------------
+    .comment-list .children{
+        padding-left: 20px;
+    }
+    .sidebar-job{
+        margin-top: 20px;
+    }
+    .inner-dashboard.container-fluid{
+        .mobile-sidebar-btn{
+            margin:25px 15px 0;
+        }
+    }
+    .job-table{
+        .job-table-applicants,
+        .job-applicants{
+            display: none;
+        }
+        .job-table-info{
+            .job-metas{
+                display: none;
+            }
+        }
+        .job-actions{
+            width: auto;
+        }
+        .job-title{
+            font-size: 15px;
+        }
+    }
+    .wrapper-testimonial-thumbnail{
+        .avarta{
+            @include size(50px,50px);
+        }
+        .name-client{
+            font-size: 15px; 
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .job-detail-buttons .btn-apply{
+        margin-top: 10px;
+    }
+}
+@media (max-width:767px) {
+    // fix gutter fox mobile
+    .slick-carousel{
+        margin-left: -8px;
+        margin-right: -8px;
+        .slick-slide{
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+    .products.row{
+        margin-left: -8px;
+        margin-right: -8px;
+        > [class *="col-"]{
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+    .woocommerce-MyAccount-navigation{
+        > ul{
+            overflow-x: auto;
+            @include flexbox();
+            padding:0 0 5px;
+            li{
+                white-space: nowrap;
+            }
+        }
+    }
+    .row-responsive{
+        margin-right: -8px;
+        margin-left: -8px;
+        [class *="col-"]{
+            padding-right: 8px;
+            padding-left: 8px;
+        }
+    }
+    .top-detail-job{
+        &,.job-detail-buttons{
+            text-align: center;
+        }
+        .job-detail-buttons{
+            margin-top: 15px;
+        }
+        .info-detail-job{
+            width: 100%;
+            padding:15px 0 0 !important;
+        }
+        .candidate-logo,
+        .employer-logo{
+            margin:auto;
+        }
+    }
+    .cmb-form{
+        [class*="portfolio-photos"],
+        [class*="profile-photos"]{
+            .wp-job-board-pro-uploaded-files{
+                margin-left: -8px;
+                margin-right: -8px;
+                .wp-job-board-pro-uploaded-file{
+                    padding-right: 8px;
+                    padding-left: 8px;
+                    width: 33.33%;
+                    &:nth-child( 3n + 1){
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+    .applicants-job{
+        .job-title{
+            display: none;
+        }
+    }
+    .job-table .job-table-info-content-title{
+        font-size: 15px;
+    }
+    .cmb-form .cmb-type-group{
+        .cmb-th,
+        .cmb-th + .cmb-td{
+            width: 100%;
+        }
+    }
+    .job-applied-wrapper{
+        .employer-logo,
+        .job-metas{
+            display: none;
+        }
+        .employer-logo + .job-content{
+            padding:0;
+        }
+        .action-button{
+            min-width: 70px;
+        }
+    }
+    .col-status,
+    .col-date{
+      margin: 10px 0;
+    }
+    .candidate-applicant{
+        .action-button{
+            padding-top: 10px;
+        }
+    }
+}
+@media (max-width:575px) {
+    .jobs-alert-ordering-wrapper{
+        > *{
+            width: 100%;
+            margin: 0 0 10px !important;
+            &:last-child{
+                margin-bottom: 0 !important;
+            }
+        }
+        .select2-container{
+            width: 100% !important;
+        }
+    }
+}
+@media(max-width: 479px){
+    .woocommerce form .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper > * > *,
+    .woocommerce form .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper > * > .select2-container, .woocommerce form .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper > * > select, .woocommerce form .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper > * > input{
+        width: 100% !important;
+        margin: 0 0 5px !important;
+    }
+}

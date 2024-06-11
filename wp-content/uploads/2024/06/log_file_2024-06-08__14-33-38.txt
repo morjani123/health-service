@@ -1,0 +1,137 @@
+
+---Downloaded files---
+The import files for: Home were successfully downloaded!
+Initial max execution time = 36000
+Files info:
+Site URL = http://localhost/service-health4
+Data file = C:\laragon\www\service-health4/wp-content/themes/jobtex/inc/vendors/one-click-demo-import/default/dummy-data.xml
+Widget file = C:\laragon\www\service-health4/wp-content/themes/jobtex/inc/vendors/one-click-demo-import/default/widgets.wie
+Customizer file = not defined!
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---ocdi/before_widgets_import---
+
+
+---Importing widgets---
+Sidebar Default : 
+
+Bloc - No Title - Imported
+Bloc - No Title - Imported
+Bloc - No Title - Imported
+
+Jobs filter sidebar : 
+
+Apus Show Elementor Template Widget - No Title - Imported
+Job Alert Form - Job Alert - Imported
+
+Jobs filter top : 
+
+Apus Show Elementor Template Widget - No Title - Imported
+
+Jobs filter topbar sidebar : 
+
+Apus Show Elementor Template Widget - No Title - Imported
+
+Jobs filter sub topbar sidebar : 
+
+Apus Show Elementor Template Widget - No Title - Imported
+
+Jobs filter topbar sidebar v2 : 
+
+Apus Show Elementor Template Widget - No Title - Imported
+
+Jobs filter sub topbar sidebar v2 : 
+
+Apus Show Elementor Template Widget - No Title - Imported
+
+Job single sidebar : 
+
+Job Detail:: Information - Information - Imported
+Job Detail::  Maps - Job Location - Imported
+Job Detail:: Employer Information - Employer Information - Imported
+Job Detail:: Contact Form - Contact %1s - Imported
+
+Employers filter sidebar : 
+
+Apus Show Elementor Template Widget - No Title - Imported
+
+Employers filter top sidebar : 
+
+Apus Show Elementor Template Widget - No Title - Imported
+
+Employers filter top maps sidebar : 
+
+Apus Show Elementor Template Widget - No Title - Imported
+
+Employer single sidebar : 
+
+Employer Detail:: Maps - No Title - Imported
+Employer Detail:: Information - Information - Imported
+Employer Detail:: Contact Form - Contact %1s - Imported
+
+Candidates filter sidebar : 
+
+Apus Show Elementor Template Widget - No Title - Imported
+Candidate Alert Form - Candidate Alert - Imported
+
+Candidates filter top sidebar : 
+
+Apus Show Elementor Template Widget - No Title - Imported
+
+Candidate single sidebar : 
+
+Candidate Detail:: Information - Information - Imported
+Candidate Detail:: Contact Form - Contact %1s - Imported
+
+User Profile sidebar : 
+
+Apus User Short Profile - No Title - Imported
+
+Blog sidebar : 
+
+Apus Search Widget - No Title - Imported
+Catégories - Categories - Imported
+Apus Recent Posts Widget - Recent Posts - Imported
+Nuage d’étiquettes - Popular Tags - Imported
+
+
+
+---ocdi/after_import---
+

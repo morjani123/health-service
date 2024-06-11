@@ -1,0 +1,337 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?ezje79");
+  src: url("../fonts/icomoon.eot?ezje79#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?ezje79") format("truetype"),
+    url("../fonts/icomoon.woff?ezje79") format("woff"),
+    url("../fonts/icomoon.svg?ezje79#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-file-pdf:before {
+  content: "\e90b";
+}
+.icon-categorie-2:before {
+  content: "\e909";
+}
+.icon-file-doc:before {
+  content: "\e90a";
+}
+.icon-logo--abstract:before {
+  content: "\e915";
+}
+.icon-logo--jira:before {
+  content: "\e923";
+}
+.icon-logo--magento:before {
+  content: "\e924";
+}
+.icon-logo--principle:before {
+  content: "\e927";
+}
+.icon-Delivery-Driver:before {
+  content: "\e94f";
+}
+.icon-Accounting:before {
+  content: "\e950";
+}
+.icon-Customer-Service:before {
+  content: "\e951";
+}
+.icon-Data-Science:before {
+  content: "\e952";
+}
+.icon-Engineering:before {
+  content: "\e953";
+}
+.icon-IT--Networking:before {
+  content: "\e954";
+}
+.icon-Project-Manager:before {
+  content: "\e955";
+}
+.icon-Sales--Marketing:before {
+  content: "\e956";
+}
+.icon-refect:before {
+  content: "\e9bb";
+}
+.icon-download:before {
+  content: "\e9bc";
+}
+.icon-my-apply:before {
+  content: "\e900";
+}
+.icon-resumes:before {
+  content: "\e902";
+}
+.icon-log-out:before {
+  content: "\e983";
+}
+.icon-change-passwords:before {
+  content: "\e903";
+}
+.icon-following:before {
+  content: "\e901";
+}
+.icon-categorie-1:before {
+  content: "\e957";
+}
+.icon-categorie-3:before {
+  content: "\e958";
+}
+.icon-categorie-4:before {
+  content: "\e959";
+}
+.icon-categorie-5:before {
+  content: "\e95a";
+}
+.icon-categorie-6:before {
+  content: "\e95b";
+}
+.icon-categorie-7:before {
+  content: "\e95c";
+}
+.icon-categorie-8:before {
+  content: "\e95d";
+}
+.icon-lock1:before {
+  content: "\e95e";
+}
+.icon-write1:before {
+  content: "\e95f";
+}
+.icon-arrow-back:before {
+  content: "\e960";
+}
+.icon-arrow-next:before {
+  content: "\e961";
+}
+.icon-ic_Bold:before {
+  content: "\e962";
+}
+.icon-ic_spacing:before {
+  content: "\e963";
+}
+.icon-alighment-center:before {
+  content: "\e97e";
+}
+.icon-alighment-right:before {
+  content: "\e97f";
+}
+.icon-ic_link:before {
+  content: "\e980";
+}
+.icon-justitify:before {
+  content: "\e981";
+}
+.icon-dolar1:before {
+  content: "\e905";
+}
+.icon-hourglass:before {
+  content: "\e982";
+}
+.icon-meeting:before {
+  content: "\e984";
+}
+.icon-chat:before {
+  content: "\e985";
+}
+.icon-mypackage:before {
+  content: "\e986";
+}
+.icon-bell1:before {
+  content: "\e987";
+}
+.icon-applicant:before {
+  content: "\e988";
+}
+.icon-save-candidate:before {
+  content: "\e989";
+}
+.icon-submit:before {
+  content: "\e98a";
+}
+.icon-profile:before {
+  content: "\e98b";
+}
+.icon-return:before {
+  content: "\e98c";
+}
+.icon-shipping:before {
+  content: "\e98d";
+}
+.icon-place:before {
+  content: "\e98e";
+}
+.icon-call:before {
+  content: "\e98f";
+}
+.icon-heart1:before {
+  content: "\e990";
+}
+.icon-flag:before {
+  content: "\e991";
+}
+.icon-like:before {
+  content: "\e992";
+}
+.icon-search1:before {
+  content: "\e993";
+}
+.icon-play:before {
+  content: "\e994";
+}
+.icon-like1:before {
+  content: "\e907";
+}
+.icon-instagram1:before {
+  content: "\e995";
+}
+.icon-smile:before {
+  content: "\e9e1";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
+.icon-minus:before {
+  content: "\ea0b";
+}
+.icon-share2:before {
+  content: "\ea82";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-star-full:before {
+  content: "\e9d9";
+}
+.icon-heart:before {
+  content: "\e9da";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
+.icon-trash:before {
+  content: "\e9aa";
+}
+.icon-time:before {
+  content: "\e9a9";
+}
+.icon-link:before {
+  content: "\e9ab";
+}
+.icon-bolt:before {
+  content: "\e9ac";
+}
+.icon-pinterest:before {
+  content: "\e9ad";
+}
+.icon-search:before {
+  content: "\e9ae";
+}
+.icon-clear:before {
+  content: "\e904";
+}
+.icon-close:before {
+  content: "\e904";
+}
+.icon-calendar_today:before {
+  content: "\e996";
+}
+.icon-image:before {
+  content: "\e997";
+}
+.icon-eye-off:before {
+  content: "\e998";
+}
+.icon-eye:before {
+  content: "\e999";
+}
+.icon-work:before {
+  content: "\e99a";
+}
+.icon-dashboard:before {
+  content: "\e99b";
+}
+.icon-filter:before {
+  content: "\e99c";
+}
+.icon-send:before {
+  content: "\e99d";
+}
+.icon-map-pin:before {
+  content: "\e99e";
+}
+.icon-keyboard_arrow_up:before {
+  content: "\e99f";
+}
+.icon-keyboard_arrow_right:before {
+  content: "\e9a0";
+}
+.icon-keyboard_arrow_left:before {
+  content: "\e9a1";
+}
+.icon-keyboard_arrow_down:before {
+  content: "\e9a2";
+}
+.icon-calendar:before {
+  content: "\e9a3";
+}
+.icon-bell:before {
+  content: "\e9a4";
+}
+.icon-help-circle:before {
+  content: "\e9a5";
+}
+.icon-grid:before {
+  content: "\e9a6";
+}
+.icon-cancel:before {
+  content: "\e9a7";
+}
+.icon-mail-envelope-closed:before {
+  content: "\e9a8";
+}
+.icon-bubble:before {
+  content: "\e9af";
+}
+.icon-caret-down:before {
+  content: "\e9b0";
+}
+.icon-paper-plane-o:before {
+  content: "\e9b1";
+}
+.icon-dollar:before {
+  content: "\e906";
+}
+.icon-check:before {
+  content: "\e9b2";
+}
