@@ -1,0 +1,26 @@
+create extension if not exists pgcrypto;
+create table public.profiles(id uuid primary key references auth.users(id) on delete cascade,full_name text not null default '',country text not null default 'Maroc',profession text not null default '',german_level text not null default 'A1',experience_years int not null default 0 check(experience_years between 0 and 60),phone text not null default '',role text not null default 'candidate' check(role in('candidate','admin')),created_at timestamptz not null default now());
+create table public.vacancies(id uuid primary key default gen_random_uuid(),title text not null,city text not null,specialty text not null,description text not null default '',active boolean not null default true,created_at timestamptz not null default now());
+create table public.applications(id uuid primary key default gen_random_uuid(),candidate_id uuid not null references public.profiles(id) on delete cascade,job_id uuid not null references public.vacancies(id) on delete cascade,status text not null default 'Nouveau' check(status in('Nouveau','Profil vérifié','Langue','Reconnaissance','Entretien','Contrat','Visa','Terminé','Refusé')),created_at timestamptz not null default now(),unique(candidate_id,job_id));
+create function public.is_admin() returns boolean language sql stable security definer set search_path='' as $$select exists(select 1 from public.profiles where id=(select auth.uid()) and role='admin')$$;
+create function public.protect_role() returns trigger language plpgsql security definer set search_path='' as $$begin if tg_op='INSERT' then new.role:='candidate'; elsif new.role is distinct from old.role and not public.is_admin() then raise exception 'Role change denied';end if;return new;end$$;
+create trigger protect_role before insert or update on public.profiles for each row execute function public.protect_role();
+create function public.create_profile() returns trigger language plpgsql security definer set search_path='' as $$begin insert into public.profiles(id) values(new.id) on conflict do nothing;return new;end$$;
+create trigger create_profile after insert on auth.users for each row execute function public.create_profile();
+alter table public.profiles enable row level security;
+alter table public.vacancies enable row level security;
+alter table public.applications enable row level security;
+create policy profiles_read on public.profiles for select to authenticated using(id=(select auth.uid()) or public.is_admin());
+create policy profiles_insert on public.profiles for insert to authenticated with check(id=(select auth.uid()));
+create policy profiles_update on public.profiles for update to authenticated using(id=(select auth.uid()) or public.is_admin()) with check(id=(select auth.uid()) or public.is_admin());
+create policy vacancies_read on public.vacancies for select to authenticated using(active or public.is_admin());
+create policy vacancies_insert on public.vacancies for insert to authenticated with check(public.is_admin());
+create policy vacancies_update on public.vacancies for update to authenticated using(public.is_admin()) with check(public.is_admin());
+create policy applications_read on public.applications for select to authenticated using(candidate_id=(select auth.uid()) or public.is_admin());
+create policy applications_insert on public.applications for insert to authenticated with check(candidate_id=(select auth.uid()) and exists(select 1 from public.vacancies where id=job_id and active));
+create policy applications_update on public.applications for update to authenticated using(public.is_admin()) with check(public.is_admin());
+insert into storage.buckets(id,name,public,file_size_limit,allowed_mime_types) values('candidate-documents','candidate-documents',false,5000000,array['application/pdf','image/jpeg','image/png']) on conflict(id) do nothing;
+create policy documents_upload on storage.objects for insert to authenticated with check(bucket_id='candidate-documents' and (storage.foldername(name))[1]=(select auth.uid())::text);
+create policy documents_read on storage.objects for select to authenticated using(bucket_id='candidate-documents' and ((storage.foldername(name))[1]=(select auth.uid())::text or public.is_admin()));
+-- Set admin role only from trusted SQL editor, after registering the admin account.
+-- update public.profiles set role='admin' where id='<admin-user-uuid>';

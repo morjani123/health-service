@@ -1,21 +1,19 @@
-# Health Service — Germany Healthcare Recruitment
+# Health Service V2 — Germany Healthcare Recruitment
 
-A fresh React + TypeScript + Vite platform replacing the old WordPress website. Original Git history remains available through earlier commits.
+React + TypeScript + Supabase candidate portal and administrator CRM.
 
-## Run
+## Production setup (required)
+1. Create a Supabase project and run `supabase/schema.sql` in its SQL editor (on a fresh project).
+2. Enable email confirmation and configure Site URL and redirect URLs for the GitHub Pages domain.
+3. Add GitHub Actions repository **Variables** `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` (publishable/anon key only, NEVER service_role).
+4. The deployment workflow reads these variables during build. Re-run it after configuration.
+5. Register your admin account via the site; then use trusted SQL editor to set role='admin' for that known user UUID. Never expose privileged keys in frontend.
+6. Review GDPR/privacy, retention, consent, applicant data processing, secure documents and job-offer verification before inviting real applicants.
 
-```bash
-npm install
-npm run dev
-npm run build
-```
+Until Supabase is configured, the public site works but the portal shows a setup notice and **does not collect candidate data**. Example job cards on the public site are illustrative, not verified jobs. The original WordPress history remains in Git history. No guarantee of job placement, visa or credential recognition.
 
-## Scope
+## Local
+`npm install && npm run build`
 
-Public multilingual FR/AR/DE landing site, healthcare jobs catalogue, eligibility information, contact form UI, and an **explicitly fictional demo CRM** for candidate pipeline exploration.
-
-**Important:** The demo form does not submit or store personal information. Candidate records are fictional. No authentication, production database, document upload, or employer integrations exist yet. Do not collect real personal or medical documents before implementing secure backend, privacy compliance, and access controls. No job placement, visa, recognition, or employment outcome is guaranteed.
-
-## Deployment
-
-GitHub Actions builds the static site and deploys to GitHub Pages. Enable Pages → Build and deployment → GitHub Actions in repository settings. The project is private; Pages availability depends on the account plan/settings.
+## Deploy
+GitHub Actions → Deploy Health Service. Enable Pages source GitHub Actions.
