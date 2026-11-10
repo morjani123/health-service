@@ -24,8 +24,8 @@ jobs:
       - run: npm install --no-audit --no-fund
       - run: npm run build
         env:
-          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
+          VITE_SUPABASE_URL: https://qozsytmpcintyyjtqzmt.supabase.co
+          VITE_SUPABASE_ANON_KEY: sb_publishable_KpUJP2ACGHWyB2QmOGRulw_ETEAwrlr
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
